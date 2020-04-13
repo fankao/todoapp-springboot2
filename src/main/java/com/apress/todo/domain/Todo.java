@@ -19,6 +19,10 @@ public class Todo {
     private LocalDateTime modified;
     private  boolean completed;
 
+    public Todo(@NotNull @NotBlank String description) {
+        this.description = description;
+    }
+
     public Todo() {
         LocalDateTime date = LocalDateTime.now();
         this.id = UUID.randomUUID().toString();
