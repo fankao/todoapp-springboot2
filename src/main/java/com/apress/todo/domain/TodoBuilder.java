@@ -8,21 +8,26 @@ public class TodoBuilder {
     public TodoBuilder() {
     }
 
-    public static TodoBuilder create(){
+    public static TodoBuilder create() {
         return instance;
     }
 
-    public TodoBuilder withDescription(String description){
+    public TodoBuilder withDescription(String description) {
         this.description = description;
         return instance;
     }
 
-    public Todo build(){
+    public TodoBuilder withId(String id) {
+        this.id = id;
+        return instance;
+    }
+
+    public Todo build() {
         Todo result = new Todo(this.description);
-        if(id!=null){
+        if (id != null) {
             result.setId(id);
         }
-        return  result;
+        return result;
     }
 
 }
