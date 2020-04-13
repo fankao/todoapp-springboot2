@@ -45,6 +45,10 @@ public class Todo {
 	void onUpdate() {
 		this.setModified(LocalDateTime.now());
 	}
+
+	public Todo(String description) {
+		this.description = description;
+	}
 	
 	
 }
