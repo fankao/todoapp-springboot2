@@ -37,13 +37,13 @@ public class Todo {
 	
 	@PrePersist
 	void onCreate() {
-		this.created = LocalDateTime.now();
-		this.modified = LocalDateTime.now();
+		this.setCreated(LocalDateTime.now());
+		this.setModified(LocalDateTime.now());
 	}
 	
 	@PreUpdate
 	void onUpdate() {
-		this.modified = LocalDateTime.now();
+		this.setModified(LocalDateTime.now());
 	}
 	
 	
